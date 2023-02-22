@@ -1,2 +1,2 @@
-hello:
-	echo "Hello, World"
+blah: blah.c
+	gcc blah.c -o blah
