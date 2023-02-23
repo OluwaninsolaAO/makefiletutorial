@@ -1,4 +1,7 @@
-all: blah
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89
 
-blah: $(wildcard *.o)
-	echo $?
+blah: blah.o
+
+clean:
+	rm -f blah.o
