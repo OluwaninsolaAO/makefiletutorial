@@ -3,7 +3,7 @@ CFLAGS = -Wall -Werror -Wextra -std=gnu89 # -pedantic
 objects = blah.o foo.o all.o
 
 all: $(objects)
-
+.PHONY: all
 $(objects): %.o: %.c
 
 %.c:
