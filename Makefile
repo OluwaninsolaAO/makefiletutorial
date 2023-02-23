@@ -4,6 +4,7 @@ objects = blah.o foo.o all.o
 
 all: $(objects)
 .PHONY: all
+
 $(objects): %.o: %.c
 
 %.c:
