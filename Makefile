@@ -6,11 +6,8 @@ all: $(objects)
 
 $(objects): %.o: %.c
 
-foo.c:
-	touch foo.c
-
-all.c:
-	touch all.c
+%.c:
+	touch $@
 
 clean:
 	rm -f all.c foo.c all.o foo.o blah.o
