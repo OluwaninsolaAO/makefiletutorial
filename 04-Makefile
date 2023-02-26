@@ -13,11 +13,11 @@ main: $(objects) some_file.c
 main.o: main.c main.h
 	gcc -c main.c
 
-some_file.c:
-	touch some_file.c
-
 count.o: count.c main.h
 	gcc -c count.c
+
+some_file.c:
+	touch some_file.c
 
 clean:
 	rm -f some_file.c
