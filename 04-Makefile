@@ -1,0 +1,23 @@
+# Make clean
+# clean target will not be called until declared to
+# be a .PHONY targets, meaning targets without a
+# target files but can still be call following the
+# example shown below:
+# $ make -f 04-Makefile clean
+
+objects = main.o count.o
+
+main: $(objects) some_file.c
+	gcc -o main $(objects)
+
+main.o: main.c main.h
+	gcc -c main.c
+
+some_file.c:
+	touch some_file.c
+
+count.o: count.c main.h
+	gcc -c count.c
+
+clean:
+	rm -f some_file.c
