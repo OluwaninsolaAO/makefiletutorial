@@ -1,0 +1,9 @@
+# * wildcard and $@ special variables
+
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra # -pedantic -std=gnu89
+
+SRC = $(wildcard *.c)
+
+main: $(SRC)
+	$(CC) $(CFLAGS) -o $@ $(SRC)
