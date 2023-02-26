@@ -1,0 +1,18 @@
+# The all target
+# Defining a `all` target as a first rule to include multiple
+# targets as its dependencies that will be checked everytime.
+
+all: main.o count.o some_file.c
+	gcc -o main main.o count.o
+
+main.o: main.c main.h
+	gcc -c main.c
+
+count.o: count.c main.h
+	gcc -c count.c
+
+some_file.c:
+	touch some_file.c
+
+clean:
+	rm -f some_file.c
