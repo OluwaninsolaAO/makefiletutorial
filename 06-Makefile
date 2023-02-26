@@ -1,0 +1,14 @@
+# Fancy Implicit Rules
+CC = gcc # Flags for implicit rules
+CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89
+
+objects = main.o count.o
+
+main: $(objects)
+	$(CC) $(CFLAGS) -o main $(objects)
+
+main.o: main.c main.h
+	$(CC) -c main.c
+
+count.o: count.c main.h
+	$(CC) -c count.c
