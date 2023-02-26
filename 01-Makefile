@@ -1,0 +1,2 @@
+main: main.c count.c main.h
+	gcc -o main main.c count.c
