@@ -1,0 +1,12 @@
+# % wildcard and $< variable
+
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89
+
+objects = main.o count.o
+
+main: $(objects)
+	$(CC) $(CFLAGS) -o $@ $(objects)
+
+%.o: %.c
+	$(CC) -c $<
