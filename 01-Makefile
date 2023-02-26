@@ -1,2 +1,5 @@
+# A simple makefile where we have `main` being the target
+# file, and `main.c`, `count.c` and `main.h` as dependencies.
+
 main: main.c count.c main.h
 	gcc -o main main.c count.c
