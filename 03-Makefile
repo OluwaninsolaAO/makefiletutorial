@@ -1,0 +1,12 @@
+# Variables
+
+objects = main.o count.o
+
+main: $(objects)
+	gcc -o main $(objects)
+
+main.o: main.c main.h
+	gcc -c main.c
+
+count.o: count.c main.h
+	gcc -c count.c
