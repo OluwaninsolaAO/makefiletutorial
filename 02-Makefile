@@ -1,0 +1,10 @@
+# A simple makefile with multiple targets
+
+main: main.o count.o
+	gcc -o main main.o count.o
+
+main.o: main.c main.h
+	gcc -c main.c
+
+count.o: count.c main.h
+	gcc -c count.c
